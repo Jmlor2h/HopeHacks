@@ -1,0 +1,19 @@
+{
+    "solutions": [
+        {
+            "heading": "Save Energy at Home!",
+            "description": "Saving energy reduces air and water pollution and conserves natural resources, Contribute by switching to LED bulbs, Hang-Dry Clothing, and Turning unused appliances and equipment off!" ,
+            "link" : "https://www.epa.gov/p2/pollution-prevention-tips-energy-efficiency"
+        },
+        {
+            "heading": "Consider Public Transportation",
+            "description": "Taking public transportation can create a healthier environment, saving natural resources and reducing harmful chemicals!",
+            "link": "https://transportation.ucla.edu/blog/5-environmental-benefits-sustainable-transportation"
+        }, 
+        {
+            "heading":"Reduce, Reuse, Recycle",
+            "description": "Recycling reduces the risk of air pollution from manufacturing processes as well as by keeping waste out of landfills!",
+            "link": "https://www.edcgov.us/Government/emd/solidwaste/pages/reduce_reuse_and_recycle.aspx"
+        }
+    ]
+}

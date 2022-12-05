@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@600&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/input.css" />
+    <title>R2H Air</title>
+  </head>
+  <body onload="loadJSON()">
+    <header>
+      <nav class="nav">
+          <img src="R2H Air Logo (1).svg" alt=""></img>
+      </nav>
+  </header> 
+    <!-- home/search -->
+    <section id="home">
+      <div class="container px-8 py-18 mx-auto text-center">
+          <div class="max-w-lg mx-auto">
+              <h1 class="text-5xl font-semibold text-sage font-mukta lg:text-5xl">R2H Air: Pollution Checker</h1>
+              <p class="mt-6 text-deepGreen font-ptSans">
+                  Search for a city and get the level of air pollution before you travel.
+              </p>
+              <div class="w-full max-w-sm mx-auto mt-6 bg-transparent border border-deepGreen rounded-md focus-within:border-gray focus-within:ring focus-within:ring-gray focus-within:ring-opacity-40">
+                  <form class="flex flex-col md:flex-row">
+                      <input type="text" id="search" placeholder="City" class="flex-1 h-10 px-4 py-2 m-1 text-gray-700 font-ptSans placeholder-gray-400 bg-transparent border-none appearance-none focus:outline-none focus:placeholder-transparent focus:ring-0" required />
+                      <div class="search-items">
+                        <!-- <textarea class="search"></textarea> -->
+                        <input id="submit" class="h-10 px-4 py-2 m-1 text-white font-mukta transition-colors duration-300 transform bg-sage rounded-md hover:bg-grayGreen focus:outline-none focus:ring ring-armyGreen" type="submit" value="Submit" />
+                      </div>
+                  </form>
+                  <div class="cityData"></div>
+              </div>
+          </div>
+  </section>
+  <!-- about us / mission statement -->
+  <section id="mission">
+    <!-- flex containter -->
+    <div
+      class="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row"
+    >
+      <!-- statement -->
+      <div
+        class="flex flex-col space-y-12 bg-transparent md:w-1/2 md:bg-gray rounded"
+      >
+        <h2
+          class="max-w-md text-4xl font-bold font-mukta text-center text-sage pt-2 px-1 md:text-left"
+        >
+          Our Mission
+        </h2>
+        <p
+          class="max-w-sm text-left text-deepGreen font-ptSans px-2 leading-8 text-lg md:text-left"
+        >
+          R2H Air aims to bring awareness of the different levels of air
+          quality to the people. We want to protect and improve public health,
+          the climate and environment, and of course, the quality of air. We
+          are dedicated to educating the public on the importance of the
+          issues caused by air pollution and want to take every possible
+          measure to move in the right direction to lower air pollution.
+        </p>
+      </div>
+      <!-- Numbered List -->
+      <div class="flex flex-col space-y-8 md:w-1/2">
+        <!-- List Item 1 -->
+        <div
+          class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+        >
+          <!-- Heading -->
+          <div class="rounded-l-full bg-gray md:bg-transparent">
+            <div class="flex items-center space-x-2">
+              <div
+                class="px-4 py-2 text-white rounded-full font-mukta md:py-1 bg-grayGreen"
+              >
+                01
+              </div>
+              <h3 class="text-base font-bold font-mukta md:mb-4 md:hidden">
+                91% of the population are affected
+              </h3>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="hidden mb-4 text-lg font-bold text-armyGreen font-mukta md:block"
+            >
+              91% of the population are affected
+            </h3>
+            <p class="text-deepGreen font-ptSans">
+              The World Health Organization (WHO) estimates that 9 out of 10
+              people across the world are breathing in polluted air.
+            </p>
+          </div>
+        </div>
+        <!-- List Item 2 -->
+        <div
+          class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+        >
+          <!-- Heading -->
+          <div class="rounded-l-full bg-gray md:bg-transparent">
+            <div class="flex items-center space-x-2">
+              <div
+                class="px-4 py-2 text-white rounded-full font-mukta md:py-1 bg-grayGreen"
+              >
+                02
+              </div>
+              <h3 class="text-base font-bold font-mukta md:mb-4 md:hidden">
+                Certain populations are at higher risk for problems caused by
+                air pollution
+              </h3>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="hidden mb-4 text-lg font-bold font-mukta text-armyGreen md:block"
+            >
+              Certain populations are at higher risk for problems caused by
+              air pollution
+            </h3>
+            <p class="text-deepGreen font-ptSans">
+              Those at higher risk include people with lung or cardiovasular
+              diseases, infants and young children, people who work or
+              exercise outdoors, adults over 65, people who lack access to
+              health care.
+            </p>
+          </div>
+        </div>
+        <!-- List Item 3 -->
+        <div
+          class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+        >
+          <!-- Heading -->
+          <div class="rounded-l-full bg-gray md:bg-transparent">
+            <div class="flex items-center space-x-2">
+              <div
+                class="px-4 py-2 text-white rounded-full font-mukta md:py-1 bg-grayGreen"
+              >
+                03
+              </div>
+              <h3 class="text-base font-bold font-mukta md:mb-4 md:hidden">
+                Most air pollution comes from energy use and production
+              </h3>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="hidden mb-4 text-lg font-bold text-armyGreen font-mukta md:block"
+            >
+              Most air pollution comes from energy use and production
+            </h3>
+            <p class="text-deepGreen font-ptSans">
+              Vehicle emissions, fuel oils and natural gas to heat homes,
+              by-products of manufacturing and power generation, particularly
+              coal-fueled power plants, and fumes from chemical production are
+              the primary sources of human-made air pollution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id = 'help' class="text-sage font-mukta">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="text-center mb-20">
+        <br>
+        <h1 class="sm:text-3xl text-2xl font-mukta text-center title-font text-sage mb-4">Ways You Can Help</h1>
+        <div id="dataLocation"></div>
+      </div>
+</section>
+  <section id="contact">
+    <div
+      class="w-full h-auto overflow-scroll block h-screen bg-white p-4 flex items-center justify-center"
+    >
+      <div class="bg-white py-6 px-10 sm:max-w-md w-full">
+        <div
+          class="sm:text-3xl text-2xl font-semibold text-center text-sage mb-12 font-mukta"
+        >
+          Contact Us!
+        </div>
+        <div class="">
+          <div>
+            <form method="POST" action="/contact">
+            <input
+              type="text"
+              name="fullname"
+              class="focus:outline-none border-b w-full pb-2 border-deepGreen font-ptSans placeholder-gray-500 focus:ring ring-gray"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              class="focus:outline-none border-b w-full pb-2 border-deepGreen placeholder-gray-500 my-8 font-ptSans focus:ring ring-gray"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="subject"
+              class="focus:outline-none border-b w-full pb-2 border-deepGreen placeholder-gray-500 mb-8 font-ptSans focus:ring ring-gray"
+              placeholder="Subject"
+              required
+            />
+          </div>
+          <div>
+            <textarea
+            name="message"
+              class="focus:outline-none border-b w-full pb-2 border-deepGreen placeholder-gray-500 mb-8 font-ptSans focus:ring ring-gray"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <div class="flex">
+            <input type="checkbox" class="border-deepGreen-400" value="" />
+            <div class="px-3 text-gray-500 font-mukta">
+              Subscribe to our Newsletter!
+            </div>
+          </div>
+          <div class="flex justify-center my-6">
+            <button
+            type="submit"
+              class="rounded-full p-3 w-full sm:w-56 bg-sage text-white text-lg font-semibold font-muktatransition-colors duration-300 hover:bg-grayGreen focus:ring ring-armyGreen"
+            >
+              Submit
+            </button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div id="row" class="row">
+        <div id="footer-col" class="footer-col">
+            <h4>company</h4>
+            <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">affiliate program</a></li>
+            </ul>
+        </div>
+        <div id="footer-col" class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+  <script src='app.js'></script>
+  <script src="firstpartyapi.js"></script>
+  </body>
+</html>
