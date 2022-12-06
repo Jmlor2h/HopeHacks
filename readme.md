@@ -23,7 +23,7 @@ Open project through command line tool ---> npm start
 - Nodemon
 - Tailwindcss
 - Mongoose
-
+- Dotenv
 # Built with
 - Node.JS - Development for server
 - Express.JS - Backend framework
