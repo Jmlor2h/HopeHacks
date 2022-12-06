@@ -1,18 +1,17 @@
 "use strict";
-import mongoose from "mongoose";
-import express from "express";
-import axios from "axios";
-import cors from "cors";
-import bodyParser from "body-parser";
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-import path from 'path';
-import dotenv from 'dotenv';
+const mongoose = require("mongoose");
+const express = require("express");
+const axios = require("axios");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const { fileURLToPath } = require('url');
+const { dirname } = require('path');
+const path = require('path');
+const dotenv = require('dotenv');
 dotenv.config();
 
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+
 
 const app = express();
 app.use(cors());
